@@ -1,0 +1,97 @@
+body {
+    background-color: dimgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type='text'],
+input[type='option'],
+input[type='number'],
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.option1 {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    margin: 21px 0;
+    width: 300px;
+    margin-left: 1%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 3%;
+}
+
+.container {
+    padding: 33px;
+    width: 700px;
+    max-width: 800px;
+    position: relative;
+    margin: 0 auto;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img_absolute {
+    position: absolute;
+    top: 0px;
+}
+
+.lado2 {
+    width: 47%;
+}
+
+.box_input {
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input_size::placeholder {
+    color: rgba(100, 100, 100, .7);
+    font-weight: 300;
+}
+
+.formularies {
+    height: 7px;
+}
+
+@media screen and(min-width: 700px) {
+    .body {
+        height: 100vh !important;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }    
+}

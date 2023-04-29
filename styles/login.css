@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://i0.wp.com/blog.divinahaus.com.br/wp-content/uploads/2017/07/23.158_Blog-min.png?fit=1200%2C628&ssl=1https://i0.wp.com/blog.divinahaus.com.br/wp-content/uploads/2017/07/23.158_Blog-min.png?fit=1200%2C628&ssl=1");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+input[type='email'],
+input[type='password'] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.imgs img {
+    width: 270px;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 3%;
+}
+
+.container {
+    padding: 16px;
+    width: 440px;
+    margin-left: 34%;
+    color: aliceblue;
+}
+
+.img_absolute {
+    position: absolute;
+    top: 0px;
+}
