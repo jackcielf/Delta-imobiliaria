@@ -42,7 +42,8 @@
 
     <style>
         .imagem {
-            height: 100vh;
+            width: 100%;
+            min-height: 700px;
             position: absolute;
             z-index: -10;
             background-repeat: no-repeat;
@@ -59,6 +60,7 @@
     <a href="../../principal/indexPrincipal.php">
         <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../../img/seta-voltar.png" alt="Voltar">
     </a>
+    
     <form enctype="multipart/form-data" method="POST">
         <br>
         <div class="imgcontainer">

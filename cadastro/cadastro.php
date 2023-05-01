@@ -11,7 +11,7 @@
     
     // SQLs
     $sql_email = "SELECT * FROM $tabelaUsuario WHERE email = '$email'";
-    $sql = "INSERT INTO $tabelaUsuario VALUES (null, '$cpfcnpj','$nome','$email','$senha','$tel','$data_nas')"; // Insere o usuário no banco
+    $sql = "INSERT INTO $tabelaUsuario VALUES (null,'$nome', '$cpfcnpj', '$email','$senha','$tel','$data_nas')"; // Insere o usuário no banco
                          
     $execucao_sql = mysqli_query($conn, $sql_email); // Verificação de email já cadastrado
     

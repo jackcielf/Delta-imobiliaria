@@ -48,8 +48,10 @@
 </head>
 
 <body>
-    <img href="../" style="margin-left:3%; height:70px; width:87px;" class="img_absolute"  src="../img/seta-voltar.png" alt="Voltar">
-
+    <a href="../principal/index.php">
+        <img style="margin-left:3%; height:70px; width:87px; filter: invert(1)" class="img_absolute" src="../img/seta-voltar.png" alt="Voltar">
+    </a>
+    
     <div class="7">
         <img style="margin-left:6%; height:325px; width:327px;" class="img_absolute" src="../img/ilustre1.png" alt="Avatar" class="avatar">
         <img style="margin-left:65%; height:325px; width:327px;" class="img_absolute" src="../img/ilustre1.png" alt="Avatar" class="avatar">

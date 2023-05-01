@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DELTΔ Imobiliária | Listagem de anúncios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/b8fa3b36209187.5713e53e33d6c.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,26 +36,30 @@
         td:hover {
             background-color: rgba(218, 140, 0, 1);
         }
-
     </style>
 </head>
 
 <body class="text-bg-dark">
-    <div class="container mx-auto">
         <h1 class="d-flex justify-content-center mb-2">DELTA</h1>
-        <h3 class="d-flex justify-content-center mb-3">Usuários</h3>
+        <h3 class="d-flex justify-content-center mb-3">Anúncios</h3>
 
         <table class="container">
             <thead>
                 <tr>
                     <th>ID_imovel <span class='fw-semibold'>(PK)</span></th>
+                    <th>Área total</th>
+                    <th>Área coberta</th>
                     <th>Estado</th>
                     <th>Cidade</th>
                     <th>Rua</th>
-                    <th>Referência</th>
-                    <th>Área total</th>
-                    <th>Área coberta</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
                     <th>Transação</th>
+                    <th>Classificação</th>
+                    <th>Referência</th>
+                    <th>Nome imagem</th>
+                    <th>Caminho imagem</th>
+                    <th>ID_usuario <span class='fw-semibold'>(FK)</span></th>
                     <th>Editar/Excluir</th>
                 </tr>
             </thead>
@@ -72,13 +77,19 @@
                             while($linha = mysqli_fetch_assoc($dados)) {
                                 echo "<tr>
                                         <td>" . $linha['id_imovel'] . "</td>
+                                        <td>" . $linha['areatotal'] . "</td>
+                                        <td>" . $linha['areacoberta'] . "</td>
                                         <td>" . $linha['estado'] . "</td>
                                         <td>" . $linha['cidade'] . "</td>
                                         <td>" . $linha['rua'] . "</td>
-                                        <td>" . $linha['referencia'] . "</td>
-                                        <td>" . $linha['areatotal'] . "</td>
-                                        <td>" . $linha['areacoberta'] . "</td>
+                                        <td>" . $linha['valor'] . "</td>
+                                        <td>" . $linha['descricao'] . "</td>
                                         <td>" . $linha['transacao'] . "</td>
+                                        <td>" . $linha['classificacao'] . "</td>
+                                        <td>" . $linha['referencia'] . "</td>
+                                        <td>" . $linha['nome_img'] . "</td>
+                                        <td>" . $linha['path'] . "</td>
+                                        <td>" . $linha['id_usuario'] . "</td>
                                         <td>
                                         	<a class='btn btn-sm btn-outline-warning' href='acaoADM/editarImovel.php?id_imovel=$linha[id_imovel]'>
                                         		<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
@@ -103,8 +114,7 @@
             </tbody>
         </table>
         
-        <button class="mt-4 btn btn-warning text-dark"><a href="../principal/indexPrincipal.php" class="text-decoration-none text-dark">Início</a></button>
-    </div>
+        <button class="mt-4 btn btn-warning text-dark ms-5"><a href="../principal/indexPrincipal.php" class="text-decoration-none text-dark">Início</a></button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

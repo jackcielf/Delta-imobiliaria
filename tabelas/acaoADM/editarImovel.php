@@ -18,7 +18,10 @@
 				$estado = $dado['estado'];
 				$cidade = $dado['cidade'];
 				$rua = $dado['rua'];
+				$valor = $dado['valor'];
+				$descricao = $dado['descricao'];
 				$transacao = $dado['transacao'];
+				$classificacao = $dado['classificacao'];
 				$referencia = $dado['referencia'];
             }
 		} else {
@@ -74,76 +77,111 @@
     <title>DELTΔ Imobiliária | Edição de anúncio</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../../styles/adicionarImovel.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            max-width: 700px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="7">
-        <img style="margin-left:-4%; height:425px; width:577px;" class="img_absolute" src="C:\Users\Wilson Farias\Downloads\pngwing.com (2).png" alt="Avatar" class="avatar">
-        <img style="margin-left:61%; height:425px; width:577px;" class="img_absolute" src="C:\Users\Wilson Farias\Downloads\pngwing.com (2).png" alt="Avatar" class="avatar">
-    </div>
+    <a href="../tabelaImovel.php">
+        <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../../img/seta-voltar.png"
+            alt="Voltar">
+    </a>
 
-    <form action="" method="POST"><br>
+    <form action="" method="POST">
         <div class="imgcontainer">
-            <img src="C:\Users\Wilson Farias\Downloads\Elegant White and Black Real Estate Agent Logo (7).png" alt="Avatar" class="avatar">
+            <img src="../../img/logo.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
             <div class="lado1">
                 <div class="box_input">
                     <label><b>Estado:</b></label>
-                    <input class="input_size" type="text" placeholder="Insira seu Estado" name="estado" required>
+                    <input class="input_size" type="text" placeholder="Insira seu Estado" name="estado"
+                        value="<?php echo $estado ?>">
                 </div>
+
                 <div class="box_input">
                     <label><b>Cidade:</b></label>
-                    <input class="input_size" type="text" placeholder="Insira sua Cidade" name="cidade" required>
+                    <input class="input_size" type="text" placeholder="Insira sua Cidade" name="cidade"
+                        value="<?php echo $cidade ?>">
                 </div>
 
                 <div class="box_input">
                     <label><b>Rua</b></label>
-                    <input class="input_size" type="text" placeholder="Insira a sua Rua" name="rua" required>
+                    <input class="input_size" type="text" placeholder="Insira a sua Rua" name="rua"
+                        value="<?php echo $rua ?>">
                 </div>
 
                 <div class="box_input">
-                    <label>Referência</label>
-                    <input class="input_size" type="text" name="referencia" placeholder="Opcional" required>
+                    <label><b>Referência:</b></label>
+                    <input class="input_size" type="text" name="referencia" placeholder="opcional"
+                        value="<?php echo $referencia ?>">
+                </div>
+
+                <div class="box_input">
+                    <label><b>Descrição do Imóvel:</b></label>
+                    <input class="input_size" type="text" placeholder="Descrição do imóvele cômodos" name="descricao"
+                        value="<?php echo $descricao ?>">
+                </div>
+
+                <div class="box_input">
+                    <label><b>Preço</b></label>
+                    <input class="input_size" type="number" placeholder="Insira o preço do imóvel " name="valor"
+                        value="<?php echo $valor ?>">
                 </div>
             </div>
 
             <div class="lado2">
                 <div class="box_input">
                     <label><b>Área total(m²):</b></label>
-                    <input class="input_size" type="text" placeholder="Insira a área total(m²)" name="areatotal" required>
+                    <input class="input_size" type="text" placeholder="Insira a área total(m²)" name="areatotal"
+                        value="<?php echo $areatotal ?>">
                 </div>
 
                 <div class="box_input">
                     <label><b>Área coberta(m²):</b></label>
-                    <input class="input_size" type="text" placeholder="Insira a área coberta(m²)" name="areacoberta" required>
+                    <input class="input_size" type="text" placeholder="Insira a área coberta(m²)" name="areacoberta"
+                        value="<?php echo $areacoberta ?>">
                 </div>
 
-                <div class="tot">
-                    <div class="transacao">
-                        <div style="padding-top: 20px">
-                            <p style="position: relative; margin: 0">Transação:</p>
-                            <select placeholder="transação" name="transacao">
-                                <option class="formularies" value="aluguel">Aluguel</option>
-                                <option class="formularies" value="compra">Compra</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="anex">
-                        <div style="margin-left:54% ;" class="formularies">
-                            <label>Anexar imagem:</label>
-                            <input type="file" name="img" required>
-                        </div>
-                    </div>
+                <div>
+                    <b>Transação:</b>
+                    <select name="transacao">
+                        <option class="formularies" value="aluguel" <?php echo ($transacao=='aluguel' ) ? 'selected'
+                            : '' ?>>Aluguel</option>
+                        <option class="formularies" value="compra" <?php echo ($transacao=='compra' ) ? 'selected' : ''
+                            ?>>Compra</option>
+                    </select>
                 </div>
 
-                <div style="padding-top: 20px; margin: 0" class="box_input">
-                    <button type="submit" name="alterar">Alterar anúncio</button>
+                <div>
+                    <b>ClassificaçÃo do Imóvel</b>
+                    <select name="classificacao">
+                        <option class="formularies" value="casa" <?php echo ($classificacao=='casa' ) ? 'selected' : ''
+                            ?>>Casa</option>
+                        <option class="formularies" value="apartamento" <?php echo ($classificacao=='apartamento' )
+                            ? 'selected' : '' ?>>Apartamento</option>
+                        <option class="formularies" value="salacomercial" <?php echo ($classificacao=='salacomercial' )
+                            ? 'selected' : '' ?>>Sala Comercial</option>
+                        <option class="formularies" value="terreno" <?php echo ($classificacao=='terreno' ) ? 'selected'
+                            : '' ?>>Terreno</option>
+                    </select>
+                </div>
+                <br>
+                <div class="box_input">
+                    <button type="submit" name="alterar">Salvar alterações</button>
                 </div>
             </div>
+        </div>
         </div>
     </form>
 </body>

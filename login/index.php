@@ -37,13 +37,20 @@
     <meta charset="UTF-8">
     <title>DELTΔ Imobiliária | Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../styles/login.css">
+
+    <style>
+        .container {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
-   ---
-
+    <a href="../principal/index.php">
+        <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../img/seta-voltar.png" alt="Voltar">
+    </a>
 
     <div class="imgs">
         <img style="margin-left:7%;" class="img_absolute" src="../img/ilustre1.png" alt="Ilustre" class="avatar">

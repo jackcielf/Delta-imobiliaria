@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <a href="../../principal/indexPrincipal.php">
+        <img style="margin-left:3%; height:70px; width:87px; filter: invert(1); z-index: 2;" class="img_absolute" src="../../img/seta-voltar.png" alt="Voltar">
+    </a>
+
     <div class="7">
         <img style="margin-left:6%; height:325px; width:470px;" class="img_absolute" src="../../img/ilustre2.png" alt="Avatar" class="avatar">
         <img style="margin-left:60%; height:325px; width:470px;" class="img_absolute" src="../../img/ilustre2.png" alt="Avatar" class="avatar">
@@ -34,36 +38,37 @@
                         <div class='container'>
                             <div class='lado1'>
                                 <div class='box_input'>
-                                    <label><b>Nome</b></label>
-                                    <input class='input_size' type='text' name='nome' value='".$obj->nome."'>
+                                    <label><b>CPF/CNPJ:</b></label>
+                                    <input class='input_size' type='text' placeholder='Insira seu CPF/CNPJ' name='cpfcnpj' value='".$obj->cpf_cnpj."'>
                                 </div>
-                    
+                
+                                <div class='box_input'>
+                                    <label><b>Nome</b></label>
+                                    <input class='input_size' type='text' placeholder='Insira seu nome' name='nome' value='".$obj->nome."'>
+                                </div>
+                
                                 <div class='box_input'>
                                     <label><b>E-mail:</b></label>
-                                    <input class='input_size' type='email' name='email' value='".$obj->email."'>
+                                    <input class='input_size' type='email' placeholder='Insira seu e-mail' name='email' value='".$obj->email."'>
                                 </div>
-                    
                                 <div class='box_input'>
                                     <label><b>senha</b></label>
-                                    <input class='input_size' type='text'  name='senha' value='".$obj->senha."'>
+                                    <input class='input_size' type='password' placeholder='Insira a sua senha' name='senha' value='".$obj->senha."'>
                                 </div>
-                    
-                                 </div>
-                                <div class='lado2'>
+                            </div>
+                            <div class='lado2'>
                                 <div class='box_input'>
                                     <label><b>Telefone</b></label>
-                                    <input class='input_size' type='text' name='telefone' value='".$obj->telefone."'>
-                                </div>  
-                    
+                                    <input class='input_size' type='number' placeholder='(00) 00000-0000' name='tel' value='".$obj->telefone."'>
+                                </div>
                                 <div class='box_input'>
                                     <label><b>Data de nascimento</b></label>
-                                    <input class='input_size' type='text'  name='data_nas' value='".$obj->data_nas."' >
+                                    <input class='input_size' type='text' placeholder='00/00/0000' name='data_nas' value='".$obj->data_nas."'>
                                 </div>
-                      
+                
                                 <div class='box_input'>
-                                    <button type='submit' name='submit'>Atualizar</button>
+                                    <button type='submit' name='submit'>Enviar</button>
                                 </div>
-                    
                             </div>
                         </div>
                     ";

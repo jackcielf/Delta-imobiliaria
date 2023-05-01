@@ -5,6 +5,7 @@ body {
     background-size: 100%;
 }
 
+
 input[type='email'],
 input[type='password'] {
     width: 100%;
@@ -47,7 +48,6 @@ img.avatar {
 .container {
     padding: 16px;
     width: 440px;
-    margin-left: 34%;
     color: aliceblue;
 }
 

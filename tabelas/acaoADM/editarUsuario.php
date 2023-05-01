@@ -79,43 +79,47 @@
 </head>
 
 <body>
+    <a href="../tabelaUsuario.php">
+        <img style="margin-left:3%; height:70px; width:87px; filter: invert(1)" class="img_absolute" src="../../img/seta-voltar.png" alt="Voltar">
+    </a>
+
     <div class="7">
-        <img style="margin-left:6%; height:325px; width:327px;" class="img_absolute" src="../img/ilustre1.png" alt="Avatar" class="avatar">
-        <img style="margin-left:65%; height:325px; width:327px;" class="img_absolute" src="../img/ilustre1.png" alt="Avatar" class="avatar">
+        <img style="margin-left:6%; height:325px; width:327px;" class="img_absolute" src="../../img/ilustre1.png" alt="Avatar" class="avatar">
+        <img style="margin-left:65%; height:325px; width:327px;" class="img_absolute" src="../../img/ilustre1.png" alt="Avatar" class="avatar">
     </div>
 
     <form action="" method="POST">
         <br>
         <div class="imgcontainer">
-            <img src="../img/Elegant White and Black Real Estate Agent Logo (7).png" alt="Avatar" class="avatar">
+            <img src="../../img/logo.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
             <div class="lado1">
                 <div class="box_input">
                     <label><b>CPF/CNPJ:</b></label>
-                    <input class="input_size" type="text" placeholder="Insira seu CPF/CNPJ" name="cpfcnpj">
+                    <input class="input_size" type="text" placeholder="Insira seu CPF/CNPJ" name="cpfcnpj" value="<?php echo $cpf_cnpj ?>">
                 </div>
 
                 <div class="box_input">
                     <label><b>Nome</b></label>
-                    <input class="input_size" type="text" placeholder="Insira seu nome" name="nome">
+                    <input class="input_size" type="text" placeholder="Insira seu nome" name="nome" value="<?php echo $nome ?>">
                 </div>
 
                 <div class="box_input">
                     <label><b>E-mail:</b></label>
-                    <input class="input_size" type="email" placeholder="Insira seu e-mail" name="email">
+                    <input class="input_size" type="email" placeholder="Insira seu e-mail" name="email" value="<?php echo $email ?>">
                 </div>
             </div>
             
             <div class="lado2">
                 <div class="box_input">
                     <label><b>Telefone</b></label>
-                    <input class="input_size" type="text" placeholder="(00) 00000-0000" name="tel">
+                    <input class="input_size" type="text" placeholder="(00) 00000-0000" name="tel" value="<?php echo $tel ?>">
                 </div>
                 <div class="box_input">
                     <label><b>Data de nascimento</b></label>
-                    <input class="input_size" type="text" placeholder="00/00/0000" name="data_nas">
+                    <input class="input_size" type="text" placeholder="00/00/0000" name="data_nas" value="<?php echo $data_nas ?>">
                 </div>
 
                 <div class="box_input">
