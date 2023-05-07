@@ -13,7 +13,7 @@
     $data_nas = $_POST['data_nas'];
 
 	// Cria comando SQL para inserir os valores da tabela cadastro
-	mysqli_query($conn, "UPDATE $tabelaUsuario set cpf_cnpj = '$cpfcnpj', nome = '$nome', email = '$email', senha = '$senha', telefone = '$tel', data_nas = '$data_nas' WHERE id_usuario = '$mat'");
+    mysqli_query($conn, "UPDATE $tabelaUsuario set cpf_cnpj = '$cpfcnpj', nome = '$nome', email = '$email', senha = '$senha', telefone = '$tel', data_nas = '$data_nas' WHERE id_usuario = '$mat'");
 	
 	header('Location: ../../principal/indexPrincipal.php');
 ?>

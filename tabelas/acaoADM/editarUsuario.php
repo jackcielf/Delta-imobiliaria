@@ -15,6 +15,7 @@
 			    $cpf_cnpj = $dado['cpf_cnpj'];
 				$nome = $dado['nome'];
 				$email = $dado['email'];
+				$senha = $dado['senha'];
 				$tel = $dado['telefone'];
 				$data_nas = $dado['data_nas'];
             }
@@ -37,7 +38,7 @@
                         <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>A senha deve ter no mínimo 7 caracteres!</p>             
                     </div>
             ");
-        } else if (strlen($_POST['tel']) < 11) {
+        } else if (strlen($_POST['tel']) < 10) {
             print_r("<div class='container-fluid text-center p-3 border border-danger' style='background: rgba(255, 0, 0, .6);'>
                         <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>O telefone deve ter no mínimo 11 caracteres!</p>             
                     </div>
@@ -52,12 +53,13 @@
 	
 			$id_usuario = $_GET['id_usuario'];
 			$cpf_cnpj = filter_input(INPUT_POST, "cpfcnpj", FILTER_DEFAULT);
-			$nome = filter_input(INPUT_POST, "usuario", FILTER_DEFAULT);
+			$nome = filter_input(INPUT_POST, "nome", FILTER_DEFAULT);
 			$email = filter_input(INPUT_POST, "email", FILTER_DEFAULT);
+			$senha = filter_input(INPUT_POST, "senha", FILTER_DEFAULT);
 			$tel = filter_input(INPUT_POST, "tel", FILTER_DEFAULT);
 			$data_nas = filter_input(INPUT_POST, "data_nas", FILTER_DEFAULT);
 	        
-			$sql_at = "UPDATE $tabelaUsuario SET cpf_cnpj = '$cpf_cnpj' nome = '$nome', email = '$email', telefone = '$tel', data_nas = '$data_nas' WHERE id_usuario = $id_usuario";
+			$sql_at = "UPDATE $tabelaUsuario SET nome = '$nome', cpf_cnpj = '$cpf_cnpj', email = '$email', senha = '$senha', telefone = '$tel', data_nas = '$data_nas' WHERE id_usuario = $id_usuario";
 			
 			mysqli_query($conn, $sql_at);
 			
@@ -110,12 +112,17 @@
                     <label><b>E-mail:</b></label>
                     <input class="input_size" type="email" placeholder="Insira seu e-mail" name="email" value="<?php echo $email ?>">
                 </div>
+
+                <div class="box_input">
+                    <label><b>Senha:</b></label>
+                    <input class="input_size" type="password" placeholder="Insira sua senha" name="senha" value="<?php echo $senha ?>">
+                </div>
             </div>
             
             <div class="lado2">
                 <div class="box_input">
                     <label><b>Telefone</b></label>
-                    <input class="input_size" type="text" placeholder="(00) 00000-0000" name="tel" value="<?php echo $tel ?>">
+                    <input class="input_size" type="number" placeholder="00 000000000" name="tel" value="<?php echo $tel ?>">
                 </div>
                 <div class="box_input">
                     <label><b>Data de nascimento</b></label>

@@ -7,7 +7,7 @@
 
     $sql = "SELECT id_usuario, email, nome, telefone, data_nas FROM $tabelaUsuario WHERE email = '$email' AND senha = '$senha'";
     
-    $result =  mysqli_query($conn, $sql); // Execução do sql no banco
+    $result = mysqli_query($conn, $sql); // Execução do sql no banco
 
     if ($result) { // Verificação de execução bem sucedida
 	    if ($obj = $result -> fetch_object()) { // Percorrendo os dados do usuário e colocando-os em uma variável (obj)

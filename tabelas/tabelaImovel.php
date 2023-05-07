@@ -72,7 +72,7 @@
                         if ($_SESSION['email'] == "alice@admin.com") {
                             include('../db/conexao.php');
                                 
-                            $sql = "SELECT * from $tabelaImovel";
+                            $sql = "SELECT * FROM $tabelaImovel";
                             $dados = mysqli_query($conn, $sql);
                             while($linha = mysqli_fetch_assoc($dados)) {
                                 echo "<tr>

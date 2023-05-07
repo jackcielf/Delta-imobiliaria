@@ -14,7 +14,7 @@
                             <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>A senha deve ter no mínimo 7 caracteres!</p>             
                         </div>
                 ");
-            } else if (strlen($_POST['tel']) < 11) {
+            } else if (strlen($_POST['tel']) < 10) {
                 print_r("<div class='container-fluid text-center p-3 border border-danger' style='background: rgba(255, 0, 0, .6);'>
                             <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>O telefone deve ter no mínimo 11 caracteres!</p>             
                         </div>
@@ -87,7 +87,7 @@
             <div class="lado2">
                 <div class="box_input">
                     <label><b>Telefone</b></label>
-                    <input class="input_size" type="number" placeholder="(00) 00000-0000" name="tel">
+                    <input class="input_size" type="number" placeholder="00 000000000" name="tel">
                 </div>
                 <div class="box_input">
                     <label><b>Data de nascimento</b></label>

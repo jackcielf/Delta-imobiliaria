@@ -41,7 +41,7 @@
 </head>
 
 <body style="background-color:#22394b; font-family: Minion Pro; color:#e2dbdb;">
-    <img class="w3-image" src="../img/background-delta.png" alt="Architecture" width="100%" height="950px">
+    <img class="w3-image" src="../img/background-delta3.png" alt="Architecture" width="100%" height="950px">
 
     <div class="w3-top">
         <div class="w3-bar w3-black w3-wide w3-padding w3-card w3-left">
@@ -287,7 +287,7 @@
 
     <div class="w3-row-padding w3-scale">
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://resizedimgs.zapimoveis.com.br/crop/420x236/named.images.sp/3e6836bd3408139b3471329267d21f9b/casa-com-5-quartos-a-venda-740m-no-monte-castelo-fortaleza.jpg"
+            <img src="https://images.adsttc.com/media/images/5ff5/cbde/63c0/175f/d800/0033/newsletter/casa-de-praia-00.jpg?1609944011"
                 alt="DJresidencias" style="width:100%;height:200px;">
             <h3>R$ 1.400. 00</h3>
             <p class="w3-opacity"> Rua Benjamim Barroso</p>
@@ -397,7 +397,7 @@
             <p><button class="w3-button w3-light-grey w3-block">REF:1238</button></p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://i.lugarcerto.com.br/iFoBsmhBKFX3RtkNIblTNAt46kU=/295x215/imgs.carteira.lugarcerto.com.br/anuncio/lugarcerto/d/3/d/d3d1e9d5ca48669a1a532ae86f0a85d0/353093816_234209563_g.jpg"
+            <img src="https://medievalengenharia.com.br/wp-content/uploads/2013/08/Fachada-Reside%CC%82ncia-Unifamiliar-Tiago-1024x576.jpg"
                 alt="DJapartamentos" style="width:100%;height:200px;">
             <h3>R$ 446.000,00</h3>
             <p class="w3-opacity">Rua Maria de Fátima, Jacarecanga</p>

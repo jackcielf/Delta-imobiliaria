@@ -1,10 +1,12 @@
 <?php
     session_start();
+
     if (!$_SESSION['id_usuario']) {
         print_r("<div class='container-fluid text-center p-3 border border-danger' style='background: rgba(255, 0, 0, .6);'>
                     <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>Usuario não identificado!</p>             
                 </div>");
     }
+    
     if ($_SESSION['email']) {
         if(isset($_POST['submit'])) {
             if (strlen($_POST['estado']) == 0 || strlen($_POST['cidade']) == 0 || strlen($_POST['areatotal']) == 0 || strlen($_POST['areacoberta']) == 0) {

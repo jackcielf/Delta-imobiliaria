@@ -1,6 +1,6 @@
 <?php
     include('../db/conexao.php'); // Importando a conexão
-                
+    
     // Pegando o digitado nos inputs
     $cpfcnpj = $_POST['cpfcnpj'];
     $nome = $_POST['nome'];
@@ -21,7 +21,7 @@
         echo "<div class='container-fluid text-center p-3 border border-danger' style='background: rgba(255, 0, 0, .6);'>
                   <p class='fw-semibold text-light m-0'>Este e-mail já esta cadastrado!</p> 
               </div>";
-    } else { // 
+    } else {
         $conn -> query($sql); // Executando sql de cadastro de usuário no banco
         
         // Executando o sql no banco e colocando o resultado dessa execução na variável '$execucao_sql_usuario_dados' (EM FORMA DE TABELA)
