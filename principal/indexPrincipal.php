@@ -35,9 +35,7 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
         if ($num_linha >= 1) {
             return $sql_query_filter;
         } else {
-            return $result = "<div style='width: 100vw; height: 100vh' class='d-flex align-items-center justify-content-center'>
-                                <p class'opacity-25'>Nada disponível no momento, tente mais tarde!</p>
-                            </div>";
+            return false;
         }
     }
 
@@ -50,15 +48,15 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
 
         switch ($filtrar_aluguel) {
             case 'casas':
-                $f_a = filtrar("aluguel", "casa");
+                $f_a = $_SESSION['f_a'] = filtrar("aluguel", "casa");
                 break;
 
             case 'apartamentos':
-                $f_a = filtrar("aluguel", "apartamento");
+                $f_a = $_SESSION['f_a'] = filtrar("aluguel", "apartamento");
                 break;
 
             case 'terrenos':
-                $f_a = filtrar("aluguel", "terreno");
+                $f_a = $_SESSION['f_a'] = filtrar("aluguel", "terreno");
                 break;
 
             default:
@@ -74,15 +72,15 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
 
         switch ($filtrar_compra) {
             case 'casas':
-                $f_c = filtrar("compra", "casa");
+                $f_c = $_SESSION['f_c'] = filtrar("compra", "casa");
                 break;
 
             case 'apartamentos':
-                $f_c = filtrar("compra", "apartamento");
+                $f_c = $_SESSION['f_c'] = filtrar("compra", "apartamento");
                 break;
 
             case 'terrenos':
-                $f_c = filtrar("compra", "terreno");
+                $f_c = $_SESSION['f_c'] = filtrar("compra", "terreno");
                 break;
 
             default:
@@ -222,7 +220,8 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
                     <a href="#compra" class="w3-bar-item w3-button">Para compra</a>
                 </div>
             </div>
-            <a class="w3-padding-large w3-hover-gray w3-hide-small w3-right w3-button"><b>DELTΔ Imobiliária</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-hide-small" style="margin-left: 7%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><?php echo "Bem vindo, <strong>" . $nome . "</strong>!" ?>
+                <a class="w3-padding-large w3-hover-black w3-hide-small w3-right w3-button"><b>DELTΔ Imobiliária</a>
         </div>
     </div>
 
@@ -382,8 +381,11 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
                     }
                 } else if ($verify_aluguel) {
                     if (isset($_POST['btn_filtrar_aluguel'])) {
-                        if ($f_a) {
-                            echo "<h1>$f_a</h1>";
+                        if ($f_a == false) {
+                            echo "<div style='width: 100vw; height: 100vh' class='d-flex align-items-center justify-content-center'>
+                                    <p class'opacity-75 fs-5'>Nada disponível no momento, tente mais tarde!</p>
+                                </div>";
+                        } else {
                             while ($dado = mysqli_fetch_assoc($f_a)) {
                                 echo "
                                     <div style='overflow: hidden; position: relative;' class='w3-col l3 m6 w3-margin-bottom'>
@@ -466,11 +468,13 @@ if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
                             </div>
                         ";
                     }
-                }
-
-                if ($verify_compra) {
+                } else {
                     if ($filtrar_compra) {
-                        if ($f_c) {
+                        if ($f_c == false) {
+                            echo "<div style='width: 100vw; height: 80vh' class='d-flex align-items-center justify-content-center'>
+                                    <p class'opacity-75 fs-5'>Nada disponível no momento, tente mais tarde!</p>
+                                </div>";
+                        } else {
                             while ($dado = mysqli_fetch_assoc($f_c)) {
                                 echo "
                                     <div style='overflow: hidden; position: relative;' class='w3-col l3 m6 w3-margin-bottom'>

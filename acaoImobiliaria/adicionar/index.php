@@ -57,7 +57,7 @@
 </head>
 
 <body>
-    <img class="imagem" src="http://www.acoplano.com.br/blog/wp-content/uploads/2019/06/vantagens-e-os-cuidados-de-construir-uma-casa-em-estrutura-metalica-acoplano.jpg" alt="">
+    <img class="imagem" src="https://images.pexels.com/photos/8941515/pexels-photo-8941515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
     
     <a href="../../principal/indexPrincipal.php">
         <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../../img/seta-voltar.png" alt="Voltar">
