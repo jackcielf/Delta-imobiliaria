@@ -11,7 +11,7 @@
         $novoNomeDoArquivo = uniqid();  // Mudança de nomes dos arquivos
         $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION)); // Conversao p letra minus
 
-        if($extensao != "jpg" || $extensao != "png") {  // Tipos de arquivos aceitos
+        if ($extensao != "jpg" || $extensao != "png") {  // Tipos de arquivos aceitos
             print_r("<div class='container-fluid text-center p-3 border border-danger' style='background: rgba(255, 0, 0, .6);'>
                             <p class='mb-0 fst-italic text-light' style='font-family: verdana, arial, serif;'>Tipo de arquivo não aceito!</p>             
                         </div>
@@ -19,9 +19,7 @@
         }
 
         $path =  $pasta . $novoNomeDoArquivo . "." . $extensao;
-        move_uploaded_file($tmp_name, $path);
-        // $sql_img = "INSERT INTO $tabelaImovel (nome_img, path) VALUES ('$nomeDoArquivo', '$path')";
-        // $conn->query($sql_img);
+        move_uploaded_file($tmp_name, $path); // Movendo imagem para uma pasta
 
         // Valores dos inputs
         $areatotal = $_POST['areatotal'];

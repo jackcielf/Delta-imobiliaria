@@ -57,10 +57,13 @@
     		$estado = filter_input(INPUT_POST, "estado", FILTER_DEFAULT);
     		$cidade = filter_input(INPUT_POST, "cidade", FILTER_DEFAULT);
     		$rua = filter_input(INPUT_POST, "rua", FILTER_DEFAULT);
+        $valor = filter_input(INPUT_POST, "valor", FILTER_DEFAULT);
     		$referencia = filter_input(INPUT_POST, "referencia", FILTER_DEFAULT);
+        $descricao = filter_input(INPUT_POST, "descricao", FILTER_DEFAULT);
     		$transacao = filter_input(INPUT_POST, "transacao", FILTER_DEFAULT);
-    		
-    		$sql_at = "UPDATE $tabelaImovel SET areatotal = '$areatotal', areacoberta = '$areacoberta', estado = '$estado', cidade = '$cidade', rua = '$rua', referencia = '$referencia', transacao = '$transacao' WHERE id_imovel = $id_imovel";
+        $classificacao = filter_input(INPUT_POST, "classificacao", FILTER_DEFAULT);
+
+        $sql_at = "UPDATE $tabelaImovel SET areatotal = '$areatotal', areacoberta = '$areacoberta', estado = '$estado', cidade = '$cidade', rua = '$rua', valor= '$valor', descricao = '$descricao', transacao = '$transacao', classificacao = '$classificacao', referencia = '$referencia' WHERE id_imovel = $id_imovel";
     		
     		mysqli_query($conn, $sql_at);
     		
@@ -84,6 +87,17 @@
         crossorigin="anonymous"></script>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imagem {
+            width: 100%;
+            min-height: 700px;
+            position: absolute;
+            z-index: -10;
+            background-repeat: no-repeat;
+        }
         .container {
             max-width: 700px;
         }
@@ -91,13 +105,14 @@
 </head>
 
 <body>
+    <img class="imagem" src="../../img/fundo.jpg" alt="">
+
     <a href="../tabelaImovel.php">
-        <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../../img/seta-voltar.png"
-            alt="Voltar">
+        <img style="margin-left:3%; height:70px; width:87px" class="img_absolute" src="../../img/seta-voltar.png" alt="Voltar">
     </a>
 
-    <form action="" method="POST">
-        <div class="imgcontainer">
+    <form method="POST">
+        <div class="imgcontainer p-0 m-0">
             <img src="../../img/logo.png" alt="Avatar" class="avatar">
         </div>
 

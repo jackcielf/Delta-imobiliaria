@@ -26,14 +26,14 @@
                 
             include_once("../../db/conexao.php"); // Importa a conexão 
 
-            $mat = $_SESSION["id_usuario"];
+            $id_usuario = $_SESSION["id_usuario"];
 
-            $sql = "SELECT * from $tabelaUsuario where id_usuario = '$mat'";
+            $sql = "SELECT * from $tabelaUsuario where id_usuario = '$id_usuario'";
 
             $result = mysqli_query($conn, $sql);
  
             if ($result) { // fetch percorre obj
-                if ($obj = $result -> fetch_object()){
+                if ($obj = $result -> fetch_object()) {
                     echo "
                         <div class='container'>
                             <div class='lado1'>

@@ -1,7 +1,7 @@
 <?php
     session_start(); // Inicia a sessão
     
-    if (!isset($_SESSION['email'])) {  // Verifica se o usuário está logado
+    if (!isset($_SESSION['email'])) { // Verifica se o usuário está logado
         if (isset($_POST['submit'])) { // Verifica se o botão foi clicado
             // Validação de inputs
             if (strlen($_POST['nome']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['senha']) == 0 || strlen($_POST['tel']) == 0 || strlen($_POST['data_nas']) == 0) {

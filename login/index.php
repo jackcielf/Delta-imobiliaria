@@ -41,6 +41,13 @@
     <link rel="stylesheet" href="../styles/login.css">
 
     <style>
+        .imagem {
+            width: 100%;
+            min-height: 700px;
+            position: absolute;
+            z-index: -10;
+            background-repeat: no-repeat;
+        }
         .container {
             margin: 0 auto;
         }
@@ -48,6 +55,8 @@
 </head>
 
 <body>
+    <img class="imagem" src="https://i.pinimg.com/originals/dc/4e/70/dc4e70b14b7984160db074d3963152d1.jpg" alt="">
+
     <a href="../principal/index.php">
         <img style="margin-left:3%; height:70px; width:87px;" class="img_absolute" src="../img/seta-voltar.png" alt="Voltar">
     </a>
